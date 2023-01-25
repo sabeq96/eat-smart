@@ -1,2 +1,2 @@
-export const apiSecret = 'Kik439IZOjs3RyA6KizZ3aTtpJ2J3RpAZqmqyCqUhGgsvaHwVyMAk4A72VQyRxwl';
-export const apiUrl = 'https://eat-smart.hasura.app/v1/graphql';
+export const apiSecret = import.meta.env.VITE_API_SECRET;
+export const apiUrl = import.meta.env.VITE_API_URL;
