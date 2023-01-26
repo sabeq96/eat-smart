@@ -1,5 +1,5 @@
 <script lang="ts">
-	export let image: string = 'https://placeimg.com/400/225/arch';
+	export let image: string = '';
 	export let text: string = '';
 </script>
 
