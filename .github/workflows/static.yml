@@ -38,7 +38,9 @@ jobs:
         uses: actions/upload-pages-artifact@v1
         with:
           # Upload entire repository
-          path: './eat-smart'
+          path: './docs'
+      - name: LS 2
+        run: ls
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v1
