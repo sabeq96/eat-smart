@@ -9,7 +9,6 @@
 	let search = '%';
 
 	const onSearch = debounce((e: Event) => {
-		console.log('dupa');
 		const target = e.target as HTMLInputElement;
 		search = target.value ? `%${target.value}%` : '%';
 	}, 1000);
@@ -18,7 +17,9 @@
 		variables: { search }
 	});
 
-	$: data = $recipes.data?.recipe || [];
+	$: data = $recipes.data
+		? [...$recipes.data?.recipe, ...$recipes.data?.recipe, ...$recipes.data?.recipe]
+		: [];
 </script>
 
 <PageTitle text="What to cook?" />

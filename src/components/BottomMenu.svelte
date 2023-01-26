@@ -1,13 +1,14 @@
 <script lang="ts">
-	import { page } from '$app/stores';
 	import { base } from '$app/paths';
+	import { page } from '$app/stores';
 	import PantryIcon from '$src/icons/PantryIcon.svelte';
 	import ReceipIcon from '$src/icons/ReceipIcon.svelte';
 	import SettingsIcon from '$src/icons/SettingsIcon.svelte';
+	import { endsWith } from 'lodash';
 
 	const menu: { to: string; icon: ConstructorOfATypedSvelteComponent }[] = [
 		{
-			to: `${base}/`,
+			to: `${base}`,
 			icon: ReceipIcon
 		},
 		{
@@ -20,7 +21,7 @@
 		}
 	];
 
-	$: getActive = (m: string): string => (m === $page.url.pathname ? 'active' : '');
+	$: getActive = (m: string): string => (endsWith(m, $page.url.pathname) ? 'active' : '');
 </script>
 
 <ul class="menu menu-horizontal bg-base-100 w-full justify-between">
