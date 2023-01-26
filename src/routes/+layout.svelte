@@ -13,23 +13,23 @@
 	const me = query<GetMeResult, GetMeQuery>(getMe, { variables: { id: 1 } });
 </script>
 
-<div class="container mx-auto px-6 background-pattern relative">
-	<div class="sticky top-0 py-4 flex justify-between items-center bg-base-100 z-10">
-		<div class="text-xl">
-			<!-- Hello {$me.data?.users_by_pk.name}! -->
-		</div>
-		<div class="avatar">
-			<div class="w-12 rounded">
-				<img src={$me.data?.users_by_pk.avatar} alt="avatar" />
-			</div>
+<div class="sticky top-0 py-4 flex justify-between items-center bg-base-100 z-10">
+	<div class="text-xl">
+		<!-- Hello {$me.data?.users_by_pk.name}! -->
+	</div>
+	<div class="avatar">
+		<div class="w-12 rounded">
+			<img src={$me.data?.users_by_pk.avatar} alt="avatar" />
 		</div>
 	</div>
-	<div class="min-h-[100vh] pb-20">
+</div>
+<div class="container mx-auto px-6 background-pattern relative">
+	<div class="min-h-[calc(100vh-80px)] pb-20">
 		<slot />
 	</div>
-	<div class="fixed bottom-0 w-full">
-		<BottomMenu />
-	</div>
+</div>
+<div class="fixed bottom-0 w-full">
+	<BottomMenu />
 </div>
 
 <style>
