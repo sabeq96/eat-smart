@@ -32,15 +32,11 @@ jobs:
         uses: actions/checkout@v3
       - name: Setup Pages
         uses: actions/configure-pages@v2
-      - name: LS
-        run: ls
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v1
         with:
           # Upload entire repository
           path: './docs'
-      - name: LS 2
-        run: ls
         working-directory: './docs'
       - name: Deploy to GitHub Pages
         id: deployment

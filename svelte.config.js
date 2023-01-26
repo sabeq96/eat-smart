@@ -11,7 +11,10 @@ const config = {
 			pages: 'docs',
 			assets: 'docs',
 			fallback: null
-		})
+		}),
+		paths: {
+			base: '/eat-smart'
+		}
 	}
 };
 

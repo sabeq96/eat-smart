@@ -1,20 +1,21 @@
 <script lang="ts">
 	import { page } from '$app/stores';
+	import { base } from '$app/paths';
 	import PantryIcon from '$src/icons/PantryIcon.svelte';
 	import ReceipIcon from '$src/icons/ReceipIcon.svelte';
 	import SettingsIcon from '$src/icons/SettingsIcon.svelte';
 
 	const menu: { to: string; icon: ConstructorOfATypedSvelteComponent }[] = [
 		{
-			to: '/',
+			to: `${base}/`,
 			icon: ReceipIcon
 		},
 		{
-			to: '/pantry',
+			to: `${base}/pantry`,
 			icon: PantryIcon
 		},
 		{
-			to: '/options',
+			to: `${base}/options`,
 			icon: SettingsIcon
 		}
 	];
